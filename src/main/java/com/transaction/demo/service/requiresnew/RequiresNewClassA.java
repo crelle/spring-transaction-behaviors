@@ -26,9 +26,7 @@ public class RequiresNewClassA {
     private  RequiresNewClassB requiresNewClassB;
 
     /**
-     * 在类A调用方法1（有@Transaction），同时调用类B方法1（无@Transaction）
-     * 类B方法1抛异常，全部回滚
-     * 事务传播特性是：REQUIRED，在一个事务的上下文中，都会回滚
+     * 创建一个新事务，如果当前事务存在，则暂停当前事务。
      */
     @Transactional(propagation = Propagation.REQUIRES_NEW,rollbackFor = RuntimeException.class)
     public void method1() {

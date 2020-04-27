@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @description: 一定要写注释啊
- * @date: 2019-06-24 13:01
- * @author: 十一
+ * crelle
+ * SUPPORTS:Support a current transaction, execute non-transactionally if none exists.
  */
 @RestController
 @RequestMapping("/support")
